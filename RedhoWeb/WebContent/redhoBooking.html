@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="main3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<title>Redha Airways</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<script>
+function toggle() {
+ if( document.getElementById("hidethis").style.display=='table-row' ){
+   	document.getElementById("hidethis").style.display = 'none'; // set to table-row instead of an empty string
+ }else{
+   document.getElementById("hidethis").style.display = 'table-row';
+ }
+}
+</script>
+</head>
+<body bgcolor="#42f442">
+<footer class="container">
+  	<div class="row">
+  	  <p class="col-sm-4">&copy; 2016 Redha Airways</p>
+  	</div>
+	</footer>
+	<table border="0">
+			<form method="post" action="searchFlight.jsp">
+            	<tr>
+                	<td colspan="3">
+                	<input name="type" type="radio" value="oneway"   onClick="toggle();">One Way
+					<input type="radio" name="type" value="roundTrip" onClick="toggle();" checked="checked">Round Trip
+                	</td>
+                </tr>
+				<tr>
+					<td>Origin :</td>
+					<td><select name="origin">
+                    	<option value="-1">Please select</option>
+                        <option value="Alor Setar">Alor Setar</option>
+                        <option value="Penang">Penang</option>
+						<option value="Kuala Lumpur">Kuala Lumpur</option>
+						<option value="Kuching">Kuching</option>
+						<option value="Kota Kinabalu">Kota Kinabalu</option>
+                      </select>
+                	</td>
+    				<td><input type="date" name="ddate" placeholder="Depart date"/></td>
+				</tr>
+				<tr>
+					<td>Destination :</td>
+					<td><select name="destination">
+                    	<option value="-1">Please select</option>
+                        <option value="Alor Setar">Alor Setar</option>
+                        <option value="Penang">Penang</option>
+						<option value="Kuala Lumpur">Kuala Lumpur</option>
+						<option value="Kuching">Kuching</option>
+						<option value="Kota Kinabalu">Kota Kinabalu</option>
+                      </select>
+                	</td>
+    				<td id="hidethis" style="display:table-row;">
+                    	<input type="date" name="rdate" placeholder="Return date"/></td>
+                <tr>
+					<td colspan="2" align="center"><input type = "submit" name = "Search" value = "Search"></td>
+				</tr>
+			</form>
+  		</table>
+	<footer class="container">
+  	<div class="row">
+  	  <p class="col-sm-4">&copy; 2016 Redha Airways</p>
+  	</div>
+	</footer>
+</body>
+</html>
